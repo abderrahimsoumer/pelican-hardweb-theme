@@ -77,7 +77,10 @@
         z-index: #{$i}0;
     }
 }
-
+/* text */
+.uppercase {
+    text-transform: uppercase;
+}
 .fs14{
     font-size: 14px;
     line-height: 26px;

@@ -1,0 +1,30 @@
+/* Globals Styles*/
+html{
+    scroll-behavior: smooth;
+}
+
+#head{
+    @extend .bg-grd-second;
+}
+.head{
+    min-height: 98vh;
+    background-color: transparent;
+    /*align-items: center;*/
+    border-bottom-left-radius: 50% 100%;
+    box-shadow: 0px 2px 4px $dark_mainColor;
+    /*Try with shaddow dark green*/
+    width: 100%;
+    position: absolute;
+}
+.bgbehind{
+    width: 100%;
+    height: 100vh;
+    background: $mainColor;
+    background: $gradient_main;
+    border-top-left-radius: 50% 100%;
+    box-shadow: -2px -2px 2px $dark_mainColor;
+}
+.intro {
+    margin-top: #{$space_2xxl}px;
+    padding: 0 #{$space_s}px;
+}
