@@ -1,0 +1,33 @@
+body{
+    font-family: $fontFamilly;
+}
+
+h1, h2, h3, h4, h5{
+    color: $thirdColor;
+    @extend .uppercase;
+}
+/*Heading size*/
+h1{
+    font-size: $fontSize_h1;
+}
+h2{
+    font-size: $fontSize_h2;
+}
+h3{
+    font-size: $fontSize_h3;
+}
+h4{
+    font-size: $fontSize_h4;
+}
+h5{
+    font-size: $fontSize_h5;
+}
+h6{
+    font-size: $fontSize_h6;
+}
+p{
+    color: $textlightColor;
+    padding: 1em 0;
+    font-size: $fontSize;
+    line-height: $lineHeights_l;
+}
