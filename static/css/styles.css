@@ -340,6 +340,13 @@ article.listing footer {
 article.listing a {
   color: #FFE4A8;
   text-decoration: underline;
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+article.listing a:hover {
+  background: #FFE4A8;
+  color: #412554 !important;
 }
 
 article.listing.listing abbr {
