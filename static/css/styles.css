@@ -352,4 +352,53 @@ abbr {
   color: #e3e3e3;
   font-size: 0.9375em;
 }
+
+/* Footer */
+svg {
+  fill: #FFE4A8;
+  -webkit-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+}
+
+svg:hover {
+  fill: transparent;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  stroke: #FFE4A8;
+}
+
+.footer {
+  background-color: #1b1023;
+}
+
+.footer .me {
+  width: 40%;
+}
+
+.footer .me img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+  float: left;
+  -webkit-box-shadow: 0px 0px 4px #FFE4A8;
+          box-shadow: 0px 0px 4px #FFE4A8;
+}
+
+.footer .me p {
+  padding: 40px 10px;
+  color: #FFE4A8;
+}
+
+.mysocialnetwork {
+  padding: 20px;
+}
+
+.mysocialnetwork ul li {
+  float: left;
+}
+
+.mysocialnetwork ul li a {
+  padding: 12px;
+}
 /*# sourceMappingURL=styles.css.map */
