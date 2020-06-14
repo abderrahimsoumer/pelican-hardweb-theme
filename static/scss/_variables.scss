@@ -12,5 +12,28 @@ $gradient_main2: linear-gradient(120deg, $dark_mainColor, $mainColor);
 $gradient_second: linear-gradient(45deg, $dark_seconColor, $secondColor);
 $gradient_second2: linear-gradient(120deg, $dark_seconColor, $secondColor);
 // Font
+$fontFamilly :  'Libre Baskerville', serif;
 
+$fontSize: 1em;
+//$fontSize_h: 3em, 2.5em, 2em, 1.8em, 1.5em, 1.2em,
+$fontSize_h1: 3em;
+$fontSize_h2: 2.5em;
+$fontSize_h3: 2em;
+$fontSize_h4: 1.8em;
+$fontSize_h5: 1.5em;
+$fontSize_h6: 1.2em;
 
+$lineHeights_l: 1.34;
+$lineHeights_h1: 0.77;
+$lineHeights_h2:1.06;
+$lineHeights_h3:1.14;
+$lineHeights_h4: 1.25;
+$lineHeights_h5:  1.32;
+
+$space_xs: 8;
+$space_s: 16;
+$space_m: 24;
+$space_l: 32;
+$space_xl: 40;
+$space_xxl: 48;
+$space_2xxl: 112;
