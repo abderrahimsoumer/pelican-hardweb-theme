@@ -1,0 +1,50 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $textlightColor;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $textlightColor;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $textlightColor;
+  }
+
+label{
+  color: $textlightColor;
+  display: inline-block;
+  padding: 1em 0;
+}
+input[type=email], input[type=text], textarea{
+  background: $dark_mainColor;
+  border-width: 0px;
+  /*border-bottom: 2px solid $thirdColor;*/
+  color: $thirdColor;
+  padding: 1em 10px;
+  outline: 0;
+  width: 100%;
+}
+
+textarea{
+  height: 150px;
+}
+
+input[type=submit]{
+    padding: 10px;
+    background: $thirdColor;
+    outline: 0;
+    border: 1px solid $thirdColor;
+    margin-left: -100px;
+    width: 100px;
+    border-radius: 0 5px 5px 0;
+}
+button[type=submit]{
+  width: 100%;
+  padding: 10px;
+  margin-top: 2em;
+  background: #ffe4a8;
+  outline: 0;
+  border: 0px solid #ffe4a8;
+  font-weight: bold;
+}

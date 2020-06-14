@@ -53,6 +53,14 @@ html{
     }
     &--even .section__content{
         @extend .bg-grd-second;
+        @extend .round-bottom-left;
+    }
+    &--last{
+        background-color: $dark_mainColor;
+    }
+    &--last .section__content{
+        @extend .bg-grd-main2;
+        @extend .round-bottom-right;
     }
 }
 
@@ -104,7 +112,37 @@ abbr{
     color: $grayscale300;
     font-size: $fontSize_xs;
 }
+/* keepintouch */
+.keepintouch{
+    h2 {
+        text-align: center;
+    }
+    .content {
+        max-width: 700px;
+        text-align: left;
+        margin: 0 auto;
 
+
+        
+        span{
+            padding-left: 10px;
+        }
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-bottom: 10px;
+            color: $textlightColor;
+            font-size: $fontSize_xs;
+        }
+
+    }
+
+    form{
+        padding-top: 14px;
+    }
+    
+}
 
   /* Footer */
   svg{
