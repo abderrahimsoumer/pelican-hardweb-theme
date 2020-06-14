@@ -1,0 +1,85 @@
+/* Flex box */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.jstfc_center{
+    justify-content: center;
+}
+.jstfc_spacebetween{
+      justify-content: space-between;
+}
+.jstfc_spacearound{
+    justify-content: space-around;
+}
+
+.aligni_center{
+    align-items: center;
+}
+
+/*Blocks */
+.w100{
+    width: 100%;
+}
+.container{
+    padding: 100px 1em;
+    text-align: center;
+    min-height: 100vh;
+}
+.alert {
+    padding: 1em !important;
+    margin-top: 1em;
+    font-size: 12px !important;
+    &.alert-danger{
+        background: #ef4848;
+    }
+    &.alert-success{
+        background:#017545;
+    }
+}
+
+.relative{
+    position: relative;  
+}
+.align-left{
+    text-align: left;
+}
+
+/*Background*/
+.bg-grd-main{
+    background-color: $mainColor;
+    background: $gradient_main;
+}
+.bg-grd-second{
+    background-color: $secondColor;
+    background: $gradient_second;
+}
+.bg-grd-main2{
+    background-color: $mainColor;
+    background: $gradient_main2;
+}
+.bg-grd-second2{
+    background-color: $secondColor;
+    background: $gradient_second2;
+}
+/*Rounded block*/
+.round-bottom-left{
+    border-bottom-left-radius: 150px 150px;
+    box-shadow: -2px 4px 8px $dark_mainColor;
+}
+.round-bottom-right{
+    border-bottom-right-radius: 150px 150px;
+    box-shadow: 2px 4px 8px $dark_mainColor;
+}
+/*z-index */
+@for $i from 1 through 10 {
+    .zIdx#{$i}0{
+        z-index: #{$i}0;
+    }
+}
+
+.fs14{
+    font-size: 14px;
+    line-height: 26px;
+    word-spacing: 0.1em;
+}
