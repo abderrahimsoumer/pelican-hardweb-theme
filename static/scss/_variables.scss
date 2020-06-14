@@ -11,10 +11,21 @@ $gradient_main: linear-gradient(45deg, $dark_mainColor, $mainColor);
 $gradient_main2: linear-gradient(120deg, $dark_mainColor, $mainColor);
 $gradient_second: linear-gradient(45deg, $dark_seconColor, $secondColor);
 $gradient_second2: linear-gradient(120deg, $dark_seconColor, $secondColor);
+
+$grayscale300: #e3e3e3;
+$grayscale400: #d2d2d2;
+$grayscale600: #a3a3a3;
+$grayscale800: #7d7d7d;
+
+
 // Font
 $fontFamilly :  'Libre Baskerville', serif;
 
 $fontSize: 1em;
+$fontSize_xs: 0.9375em;
+$fontSize_s: 1em;
+$fontSize_m: 1.25em;
+$fontSize_l: 1.4375‬em;
 //$fontSize_h: 3em, 2.5em, 2em, 1.8em, 1.5em, 1.2em,
 $fontSize_h1: 3em;
 $fontSize_h2: 2.5em;
@@ -30,10 +41,10 @@ $lineHeights_h3:1.14;
 $lineHeights_h4: 1.25;
 $lineHeights_h5:  1.32;
 
-$space_xs: 8;
-$space_s: 16;
-$space_m: 24;
-$space_l: 32;
-$space_xl: 40;
-$space_xxl: 48;
-$space_2xxl: 112;
+$space_xs: 8px;
+$space_s: 16px;
+$space_m: 24px;
+$space_l: 32px;
+$space_xl: 40px;
+$space_xxl: 48px;
+$space_2xxl: 112px;

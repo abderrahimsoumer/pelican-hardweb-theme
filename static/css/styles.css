@@ -64,7 +64,7 @@ a {
 }
 
 /* Flex box */
-.flex {
+.flex, .head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,7 +89,7 @@ a {
       justify-content: space-around;
 }
 
-.aligni_center {
+.aligni_center, .head {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -128,23 +128,29 @@ a {
   text-align: left;
 }
 
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #FFE4A8;
+}
+
 /*Background*/
-.bg-grd-main {
+.bg-grd-main, .section--even {
   background-color: #412554;
   background: linear-gradient(45deg, #1b1023, #412554);
 }
 
-.bg-grd-second, #head {
+.bg-grd-second, #head, .section--even .section__content {
   background-color: #008B52;
   background: linear-gradient(45deg, #025532, #008B52);
 }
 
-.bg-grd-main2 {
+.bg-grd-main2, .section--odd .section__content {
   background-color: #412554;
   background: linear-gradient(120deg, #1b1023, #412554);
 }
 
-.bg-grd-second2 {
+.bg-grd-second2, .section--odd {
   background-color: #008B52;
   background: linear-gradient(120deg, #025532, #008B52);
 }
@@ -156,7 +162,7 @@ a {
           box-shadow: -2px 4px 8px #1b1023;
 }
 
-.round-bottom-right {
+.round-bottom-right, .section--odd .section__content {
   border-bottom-right-radius: 150px 150px;
   -webkit-box-shadow: 2px 4px 8px #1b1023;
           box-shadow: 2px 4px 8px #1b1023;
@@ -214,6 +220,10 @@ a {
   word-spacing: 0.1em;
 }
 
+.padding0 {
+  padding: 0;
+}
+
 body {
   font-family: "Libre Baskerville", serif;
 }
@@ -250,7 +260,7 @@ h6 {
 p {
   color: #f5f5f5;
   padding: 1em 0;
-  font-size: 1em;
+  font-size: 1.25em;
   line-height: 1.34;
 }
 
@@ -262,18 +272,16 @@ html {
 .head {
   min-height: 98vh;
   background-color: transparent;
-  /*align-items: center;*/
   border-bottom-left-radius: 50% 100%;
   -webkit-box-shadow: 0px 2px 4px #1b1023;
           box-shadow: 0px 2px 4px #1b1023;
-  /*Try with shaddow dark green*/
   width: 100%;
   position: absolute;
 }
 
 .bgbehind {
   width: 100%;
-  height: 100vh;
+  padding-top: 100vh;
   background: #412554;
   background: linear-gradient(45deg, #1b1023, #412554);
   border-top-left-radius: 50% 100%;
@@ -282,7 +290,66 @@ html {
 }
 
 .intro {
-  margin-top: 112px;
+  width: 90%;
+  max-width: 1000px;
   padding: 0 16px;
+  margin: 0 auto;
+}
+
+.section {
+  position: relative;
+}
+
+.section .section__content {
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+.section__content > * {
+  width: 90%;
+  max-width: 1000px;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin: 0 auto;
+}
+
+/*
+if you want less space between all articles remove  padding-bottom from article.listing and decomment this
+.section__content > *:last-child{
+    padding-bottom: 112px; 
+}
+*/
+/*Articles */
+header a {
+  text-decoration: none !important;
+}
+
+article.listing {
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+article.listing footer {
+  color: #e3e3e3;
+}
+
+article.listing a {
+  color: #FFE4A8;
+  text-decoration: underline;
+}
+
+article.listing.listing abbr {
+  display: inline-block;
+  padding: 8px 0;
+}
+
+article.listing.listing address {
+  display: inline-block;
+  padding: 8px 0 8px 8px;
+}
+
+abbr {
+  color: #e3e3e3;
+  font-size: 0.9375em;
 }
 /*# sourceMappingURL=styles.css.map */

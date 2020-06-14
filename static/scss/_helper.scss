@@ -45,6 +45,12 @@
     text-align: left;
 }
 
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: $thirdColor;
+}
+
 /*Background*/
 .bg-grd-main{
     background-color: $mainColor;
@@ -85,4 +91,8 @@
     font-size: 14px;
     line-height: 26px;
     word-spacing: 0.1em;
+}
+
+.padding0{
+    padding: 0;
 }
