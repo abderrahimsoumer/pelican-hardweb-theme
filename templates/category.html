@@ -1,8 +1,17 @@
 {% extends "index.html" %}
 
 {% block title %}{{ SITENAME }} - {{ category }} category{% endblock %}
-
-{% block content_title %}
-<h2>Articles in the {{ category }} category</h2>
+{% block description %}{{ SITENAME }} - Read the latest articles in the {{ category }} category{% endblock %}
+{% block content_head %} 
+<section id="head" class="relative zIdx100">
+    <div class="head">
+        <header class="intro">
+            <h1>Articles in the {{ category }} category</h1>
+            <p></p>
+        </header>
+    </div>
+    <div class="bgbehind">
+        
+    </div>
+</section>
 {% endblock %}
-

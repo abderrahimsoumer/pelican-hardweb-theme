@@ -77,6 +77,9 @@
     border-bottom-right-radius: 150px 150px;
     box-shadow: 2px 4px 8px $dark_mainColor;
 }
+.no-round{
+    border-radius: 0 !important;
+}
 /*z-index */
 @for $i from 1 through 10 {
     .zIdx#{$i}0{

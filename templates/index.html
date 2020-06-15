@@ -1,28 +1,79 @@
 {% extends "base.html" %}
-{% block content %}
-<section id="content">
-{% block content_title %}
-<h2>All articles</h2>
-{% endblock %}
-
-<ol id="post-list">
-{% for article in articles_page.object_list %}
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
-                <footer class="post-info">
-                    <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
-                    <address class="vcard author">By
-                    {% for author in article.authors %}
-                        <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                    {% endfor %}
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
-        </article></li>
-{% endfor %}
-</ol><!-- /#posts-list -->
-{% if articles_page.has_other_pages() %}
-    {% include 'pagination.html' %}
+{% block content %}        
+{% block content_head %} 
+<section id="head" class="relative zIdx100">
+    <div class="head">
+        <header class="intro">
+            <h1>I'm a Full-stack Developer</h1>
+            <p>I create website and app or both the <em>hard way</em> and the <em>easy way</em></p>
+        </header>
+    </div>
+    <div class="bgbehind">
+        
+    </div>
+</section>
+{% endblock %} 
+{% if articles %}
+{% for article in articles %}        
+    {% if loop.index == 1 %}
+    <section class="section section--odd zIdx90">
+        <div class="section__content {% if loop.length  == 1 %}no-round{%endif%}">
+            <article  id="last_article" class="listing">
+                <header>
+                    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalien vers «{{ article.title|striptags }}»"><h2>{{ article.title }}</h2></a>
+                </header>
+                <div class="divider"></div>
+                <footer>
+                   <abbr class="published" title="{{ article.date.isoformat() }}"> Published: {{ article.date.strftime('%d/%m/%Y &agrave; %H:%M') }} </abbr>
+                    <address class="author">
+                            By {% for author in article.authors %}
+                            <a class="url" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                          {% endfor %}
+                    </address> 
+                </footer>
+                <div class="description">
+                    {{ article.summary }}
+                    <p class="padding0">In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.</p>
+                    {% if article.tags %}<p class="padding0">tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a> {% endfor %}</p>{% endif %}
+                </div>
+            </article>
+        </div>
+    </section>
+        {% if loop.length  > 1 %}
+        <section class="section section--even zIdx80">
+            <div class="section__content">
+                <ol class="article_listing">
+        {% endif %}
+    {% else %}
+            <li>
+                <article class="listing">
+                    <header>
+                        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalien vers «{{ article.title|striptags }}»"><h2>{{ article.title }}</h2></a>
+                    </header>
+                    <div class="divider"></div>
+                    <footer>
+                       <abbr class="published" title="{{ article.date.isoformat() }}"> Published: {{ article.date.strftime('%d/%m/%Y &agrave; %H:%M') }} </abbr>
+                        <address class="author">
+                                By {% for author in article.authors %}
+                                <a class="url" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                              {% endfor %}
+                        </address> 
+                    </footer>
+                    <div class="description">
+                        {{ article.summary }}
+                        <p class="padding0">In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.</p>
+                        {% if article.tags %}<p class="padding0">tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a> {% endfor %}</p>{% endif %}
+                    </div>
+                </article>
+            </li>
+            
+        
 {% endif %}
-</section><!-- /#content -->
+{% endfor %}
+{% if articles|length  > 1 %}
+</ol>
+</div>
+</section>
+{% endif %}
+{% endif %}
 {% endblock content %}

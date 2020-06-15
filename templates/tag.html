@@ -1,7 +1,18 @@
 {% extends "index.html" %}
 
 {% block title %}{{ SITENAME }} - {{ tag }} tag{% endblock %}
+{% block description %}{{ SITENAME }} - Articles tagged with {{ tag }}{% endblock %}
 
-{% block content_title %}
-<h2>Articles tagged with {{ tag }}</h2>
+{% block content_head %} 
+<section id="head" class="relative zIdx100">
+    <div class="head">
+        <header class="intro">
+            <h1>Articles tagged with {{ tag }}</h1>
+            <p></p>
+        </header>
+    </div>
+    <div class="bgbehind">
+        
+    </div>
+</section>
 {% endblock %}
