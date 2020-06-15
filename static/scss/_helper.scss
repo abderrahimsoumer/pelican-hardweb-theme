@@ -44,6 +44,9 @@
 .align-left{
     text-align: left;
 }
+.align-center{
+    text-align: center;
+}
 
 .divider {
     width: 100%;
@@ -97,5 +100,5 @@
 }
 
 .padding0{
-    padding: 0;
+    padding: 0 !important;
 }

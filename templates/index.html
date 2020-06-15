@@ -20,22 +20,11 @@
         <div class="section__content {% if loop.length  == 1 %}no-round{%endif%}">
             <article  id="last_article" class="listing">
                 <header>
-                    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalien vers «{{ article.title|striptags }}»"><h2>{{ article.title }}</h2></a>
+                    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}"><h3>{{ article.title }}</h3></a>
                 </header>
                 <div class="divider"></div>
-                <footer>
-                   <abbr class="published" title="{{ article.date.isoformat() }}"> Published: {{ article.date.strftime('%d/%m/%Y &agrave; %H:%M') }} </abbr>
-                    <address class="author">
-                            By {% for author in article.authors %}
-                            <a class="url" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                          {% endfor %}
-                    </address> 
-                </footer>
-                <div class="description">
-                    {{ article.summary }}
-                    <p class="padding0">In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.</p>
-                    {% if article.tags %}<p class="padding0">tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a> {% endfor %}</p>{% endif %}
-                </div>
+                {% import 'article_infos.html' as articleInfos with context %}
+                {{ articleInfos.article_infos(article) }}
             </article>
         </div>
     </section>
@@ -48,22 +37,11 @@
             <li>
                 <article class="listing">
                     <header>
-                        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalien vers «{{ article.title|striptags }}»"><h2>{{ article.title }}</h2></a>
+                        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}"><h3>{{ article.title }}</h3></a>
                     </header>
                     <div class="divider"></div>
-                    <footer>
-                       <abbr class="published" title="{{ article.date.isoformat() }}"> Published: {{ article.date.strftime('%d/%m/%Y &agrave; %H:%M') }} </abbr>
-                        <address class="author">
-                                By {% for author in article.authors %}
-                                <a class="url" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                              {% endfor %}
-                        </address> 
-                    </footer>
-                    <div class="description">
-                        {{ article.summary }}
-                        <p class="padding0">In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.</p>
-                        {% if article.tags %}<p class="padding0">tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a> {% endfor %}</p>{% endif %}
-                    </div>
+                    {% import 'article_infos.html' as articleInfos with context %}
+                    {{ articleInfos.article_infos(article) }}
                 </article>
             </li>
             

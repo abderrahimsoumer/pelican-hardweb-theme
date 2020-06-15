@@ -14,7 +14,7 @@
 label{
   color: $textlightColor;
   display: inline-block;
-  padding: 1em 0;
+  padding: $space_xs 0;
 }
 input[type=email], input[type=text], textarea{
   background: $dark_mainColor;
@@ -38,6 +38,7 @@ input[type=submit]{
     margin-left: -100px;
     width: 100px;
     border-radius: 0 5px 5px 0;
+    cursor: pointer;
 }
 button[type=submit]{
   width: 100%;
@@ -47,4 +48,5 @@ button[type=submit]{
   outline: 0;
   border: 0px solid #ffe4a8;
   font-weight: bold;
+  cursor: pointer;
 }

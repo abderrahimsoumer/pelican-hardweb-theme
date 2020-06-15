@@ -1,33 +1,41 @@
 body{
     font-family: $fontFamilly;
+    line-height: $lineHeights_l;
 }
 
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5, h6{
     color: $thirdColor;
     @extend .uppercase;
 }
 /*Heading size*/
 h1{
     font-size: $fontSize_h1;
+    line-height: $lineHeights_h1;
 }
 h2{
     font-size: $fontSize_h2;
+    line-height: $lineHeights_h2;
 }
 h3{
     font-size: $fontSize_h3;
+    line-height: $lineHeights_h3;
 }
 h4{
     font-size: $fontSize_h4;
+    line-height: $lineHeights_h4;
 }
 h5{
     font-size: $fontSize_h5;
+    line-height: $lineHeights_h5;
 }
 h6{
     font-size: $fontSize_h6;
+    line-height: $lineHeights_h6;
 }
 p{
     color: $textlightColor;
     padding: 1em 0;
     font-size: $fontSize_m;
-    line-height: $lineHeights_l;
 }
+strong, b {font-weight: bold;}
+em, i {font-style: italic;}

@@ -2,6 +2,10 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    color: $textlightColor;
+}
+
 #head{
     @extend .bg-grd-second;
 }
@@ -20,7 +24,7 @@ html{
 
 .bgbehind{
     width: 100%;
-    padding-top: 100vh;
+    height: 100vh;
     background: $mainColor;
     background: $gradient_main;
     border-top-left-radius: 50% 100%;
@@ -84,7 +88,7 @@ if you want less space between all articles remove  padding-bottom from article.
 header a{
     text-decoration: none !important;
 }
-article.listing {
+article {
     padding-top: #{$space_2xxl};
     padding-bottom: #{$space_2xxl}; 
     footer {
@@ -99,28 +103,99 @@ article.listing {
             color: $mainColor !important;
         }
     }
-    &.listing {
-
-        abbr {
-            display: inline-block;
-            padding: $space_xs 0 ;
-        }
-        address {
-            display: inline-block; 
-            padding: $space_xs 0 $space_xs $space_xs ;
-        }
+    a img {border: 0px; text-decoration: none;}
+    abbr {
+        display: inline-block;
+        padding: $space_xs 0 ;
     }
-
+    address {
+        display: inline-block; 
+        padding: $space_xs 0 $space_xs $space_xs ;
+    }
+    
     
 }
 abbr{
     color: $grayscale300;
     font-size: $fontSize_xs;
 }
+
+.article {
+    h1,h2,h3,h4,h5,h6{
+        margin-top: $space_m;
+        margin-bottom: $space_xs;
+    }
+    p{
+        padding: 0 0 1em 0;
+    }
+    ul li {
+        list-style-type: disc;
+        li{
+            list-style-type: circle;
+            li {
+                list-style-type: square;
+            }
+        }
+    }
+    ol li {
+        list-style-type: decimal;
+        li{
+            list-style-type: upper-alpha;
+            li {
+                list-style-type: lower-alpha;
+            }
+        }
+        
+    }
+    li {
+        margin-left: 2em;
+        padding: 0;
+        p{
+            padding: 0;
+        }
+    }
+    blockquote {
+        margin-left: 1em;
+        padding: $space_xs;
+        border-left: 5px solid $dark_mainColor;
+    
+    }
+    code {
+        padding: 2px 4px;
+        font-size: 90%;
+        background-color: $dark_mainColor;
+        border-radius: 4px;
+    }
+
+    table{
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+
+        td {
+            padding: 8px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border-top: 1px solid $textlightColor;
+        }
+        th {
+            text-align: left;
+            vertical-align: bottom;
+            border-bottom: 2px solid #ddd;
+        }
+        
+    }
+
+}
 /* keepintouch */
 .keepintouch{
     h2 {
         text-align: center;
+    }
+    p{
+        padding: $space_s 0;
     }
     .content {
         max-width: 700px;
