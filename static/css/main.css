@@ -556,6 +556,19 @@ svg:hover {
   padding: 12px;
 }
 
+.paginator {
+  text-align: center;
+}
+
+.paginator a {
+  background: #ffe4a8;
+  color: #1b1023;
+  width: 40px;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 ::-webkit-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #f5f5f5;

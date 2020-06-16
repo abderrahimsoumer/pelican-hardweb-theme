@@ -14,7 +14,7 @@
 </section>
 {% endblock %} 
 {% if articles %}
-{% for article in articles %}        
+{% for article in articles_page.object_list %}        
     {% if loop.index == 1 %}
     <section class="section section--odd zIdx90">
         <div class="section__content {% if loop.length  == 1 %}no-round{%endif%}">
@@ -27,6 +27,7 @@
                 {{ articleInfos.article_infos(article) }}
             </article>
         </div>
+        
     </section>
         {% if loop.length  > 1 %}
         <section class="section section--even zIdx80">
@@ -48,8 +49,11 @@
         
 {% endif %}
 {% endfor %}
-{% if articles|length  > 1 %}
+{% if articles_page.object_list|length  > 1 %}
 </ol>
+{% if articles_page.has_other_pages() %}
+    {% include 'pagination.html' %}
+{% endif %}
 </div>
 </section>
 {% endif %}

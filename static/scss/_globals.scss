@@ -267,3 +267,15 @@ abbr{
         }
     }
 }
+
+.paginator {
+    text-align: center;
+    a{
+        background: #ffe4a8;
+        color: #1b1023;
+        width: 40px;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
