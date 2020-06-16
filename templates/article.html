@@ -1,6 +1,26 @@
 {% extends "base.html" %}
 {% block html_lang %}{{ article.lang }}{% endblock %}
 {% block title %}{{ SITENAME }} - {{ article.title|striptags  }}{% endblock %}
+{% block description %}{{ SITENAME }} - {{ article.summary|striptags  }}{% endblock %}
+
+{% block meta_extra %}
+<meta property="og:url" content="{{SITEURL}}/{{article.url}}">
+<link rel="canonical" href="{{SITEURL}}/{{article.url}}">
+{% if article.imagealt %}
+<meta name="twitter:image:alt" content="{{article.imagealt}}">
+{% endif %}
+<link rel="canonical" href="https://hardweb.dev/">
+{% if article.keywords %}
+<meta name="keywords" value="{{ article.keywords|join(',') }}" />
+{% elif article.tags  %}
+<meta name="keywords" value="{{ article.tags|join(',') }}" />
+{% endif %}
+{% if article.image %}
+<meta property="og:image" content="{{article.image}}">
+{% endif %}
+
+{% endblock %}
+{% block begin_body %} {% include 'facebook.html' %} {% endblock %}
 
 {% block content %}        
 {% block content_head %} 

@@ -8,13 +8,12 @@
         <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
         <meta name="description" content="{% block description %}{{ SITENAME }} - {{ SITESUBTITLE }} {%endblock%}">
         <meta name="author" content="{% block author %}{{AUTHOR}}{%endblock%}">
-        {% block meta_og %}
         <meta property="og:title" content="{{ self.title() }}">
         <meta property="og:description" content="{{ self.description() }}">
-        <meta property="og:type" content="blog">
+        <meta property="og:type" content="{% block meta_type %}blog{%endblock%}">
         <meta name="twitter:card" content="summary_large_image">
         <meta property="og:site_name" content="{{ SITENAME }}">
-        {%endblock%}
+        {% block meta_extra %} {% endblock %}
 
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
         {% if DEFAULT_LANG =='ar'%}{# support rtl #}
@@ -52,7 +51,7 @@
 </head>
 
 <body id="index" class="home">
-    {% include 'facebook.html' %} 
+    {% block begin_body %} {% endblock %}
     <header>
         {% block menu_languages %}
         {% endblock %}
