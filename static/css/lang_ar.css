@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.section p {
+  text-align: right;
+}
+
+.section .disc {
+  text-align: right;
+}
+
+.section .pic.right {
+  float: left;
+}
+
+.section .pic.left {
+  float: right;
+}
+
+.keepintouch .content {
+  text-align: right;
+}
+
+.align-left {
+  text-align: right;
+}
+
+.menu-icon.close:before {
+  content: "القائمة";
+}
+
+.menu-icon.open:before {
+  content: "أغلق";
+}
+/*# sourceMappingURL=lang_ar.css.map */
