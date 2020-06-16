@@ -226,8 +226,8 @@ abbr{
     
 }
 
-  /* Footer */
-  svg{
+/* Footer */
+svg{
     fill: $thirdColor;
     transition: all .4s ease-out;
     
@@ -269,7 +269,7 @@ abbr{
         }
     }
 }
-
+/*pagination design*/
 .paginator {
     text-align: center;
     a{
@@ -280,4 +280,36 @@ abbr{
         font-size: 24px;
         font-weight: bold;
     }
+}
+
+/*mobile */
+@media screen and (max-width: $breakpoints_small){
+    h1{
+        font-size: $fontSize_h2;
+        word-break: break-word;
+    }
+    h2{
+        font-size: $fontSize_h3;
+        word-break: break-word;
+    }
+    h3{
+        font-size: $fontSize_h4;
+        word-break: break-word;
+    }
+    h4{
+        font-size: $fontSize_h5;
+    }
+    h5{
+        font-size: $fontSize_h6;
+    }
+       
+    footer.flex{
+        justify-content: center;
+    }
+    footer .me {
+        width: 100%;
+    }
+    footer svg{
+        width: 25px;
+    } 
 }

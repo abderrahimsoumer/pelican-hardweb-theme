@@ -33,6 +33,7 @@ $fontSize_h3: 2em;
 $fontSize_h4: 1.8em;
 $fontSize_h5: 1.5em;
 $fontSize_h6: 1.2em;
+$fontSize_h7: 1em; // on mobile I started from h2 mean h1 is h2 ... h6 is h7
 
 $lineHeights_l: 1.7;
 $lineHeights_h1: 0.9;
@@ -49,3 +50,5 @@ $space_l: 32px;
 $space_xl: 40px;
 $space_xxl: 48px;
 $space_2xxl: 112px;
+
+$breakpoints_small : 460px;
