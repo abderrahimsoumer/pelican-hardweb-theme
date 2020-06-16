@@ -45,6 +45,10 @@
         <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
         {% endif %}
         {% endblock head %}
+
+<!--[if lt IE 9]>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/html5shiv/html5shiv.min.js"></script>
+<![endif]-->
 </head>
 
 <body id="index" class="home">
