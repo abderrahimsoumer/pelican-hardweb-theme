@@ -45,7 +45,49 @@
 </head>
 
 <body id="index" class="home">
-        
+    <header>
+        <ul id="menu_languages" class="languages" >
+            <li class="active"><a href="#">English</a></li>
+            <li><a href="/fr/index.html">Français</a></li>
+            <li><a href="/ar/index.html">العربية</a></li>
+        </ul>
+        <span id="menu_icon" class="menu-icon close">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <div id="menu_overlay" class="overlay-menu">
+    
+            <nav class="sidemenu">
+                <div id="site_name" class="site_name"><a href="{{ SITEURL }}/index.html">{{ SITENAME }}</a></div>
+                <ul>
+                    {% for title, link in MENUITEMS %}
+                    <li><a href="{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
+                    <li class="has_menu"><a href="{{ SITEURL }}/index.html">Blog</a>
+                        <span class="submenu_toggle"></span>
+                        <ul>
+                            {% if DISPLAY_PAGES_ON_MENU != False %}
+                            {% for p in pages %}
+                                <li {% if p == page %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                            {% endfor %}
+                            {% endif %}
+                            {% if DISPLAY_CATEGORIES_ON_MENU -%}
+                            <li ><span class="separator">Categories</span>
+                                <span class="submenu_toggle"></span>
+                                <ul>
+                                {% for cat, null in categories %}
+                                    <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                                {% endfor %}
+                                </ul>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
         <main>
           {% block content %}
           {% endblock %}
@@ -86,7 +128,7 @@
                       <input type="submit" value="Subscribe">
                   </form-->
                   <form action="/" method="POST" id="contactForm">
-                      <input type="hidden" name="lang" value="en">
+                      <input type="hidden" name="lang" value="{{ self.html_lang() }}">
                       <input type="hidden" name="page_name" value="index">
                       <label>Name</label>
                       <input type="text" name="name" required>
@@ -157,5 +199,6 @@
               </ul>
           </div>
       </footer>
+      <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/main.js"></script>
 </body>
 </html>
