@@ -232,6 +232,11 @@ a {
   padding: 0 !important;
 }
 
+.second_strong {
+  color: #008B52;
+  font-weight: bold;
+}
+
 body {
   font-family: "Libre Baskerville", serif;
   line-height: 1.7;
@@ -469,6 +474,10 @@ abbr {
   text-align: left;
   vertical-align: bottom;
   border-bottom: 2px solid #ddd;
+}
+
+.article img {
+  max-width: 100%;
 }
 
 /* keepintouch */
@@ -788,7 +797,8 @@ button[type=submit] {
 }
 
 .overlay-menu .site_name {
-  font-size: 48px;
+  font-size: 2em;
+  font-weight: bold;
   border-bottom: 1px solid #1b1023;
   height: 30%;
   -webkit-box-sizing: border-box !important;
