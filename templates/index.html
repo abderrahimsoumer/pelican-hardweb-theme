@@ -28,6 +28,9 @@
                 {% import 'article_infos.html' as articleInfos with context %}
                 {{ articleInfos.article_infos(article) }}
             </article>
+            {% if loop.length <= 1 and articles_page.has_other_pages() %}
+                {% include 'pagination.html' %}
+            {% endif %}
         </div>
         
     </section>
