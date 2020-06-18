@@ -6,9 +6,6 @@
 {% block meta_extra %}
 <meta property="og:url" content="{{SITEURL}}/{{article.url}}">
 <link rel="canonical" href="{{SITEURL}}/{{article.url}}">
-{% if article.imagealt %}
-<meta name="twitter:image:alt" content="{{article.imagealt}}">
-{% endif %}
 {% if article.keywords %}
 <meta name="keywords" value="{{ article.keywords }}" />
 {% elif article.tags  %}
@@ -16,6 +13,9 @@
 {% endif %}
 {% if article.image %}
 <meta property="og:image" content="{{article.image}}">
+{% endif %}
+{% if article.imagealt %}
+<meta name="twitter:image:alt" content="{{article.imagealt}}">
 {% endif %}
 
 {% endblock %}
