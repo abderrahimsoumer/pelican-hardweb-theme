@@ -48,7 +48,7 @@
 {% if article.related_posts %}       
 <section class="section section--even zIdx80">
    <div class="section__content">
-       <h2 class="align-center">Related posts</h2>
+       <h2 class="align-center">{% trans %}Related posts{% endtrans %}</h2>
         <ol class="article_listing">
         {% for related_post  in article.related_posts %} 
         <li>

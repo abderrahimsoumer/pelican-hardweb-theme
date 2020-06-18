@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}" {% if DEFAULT_LANG =='ar'%}dir="rtl"{% endif %}>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}" {% if DEFAULT_LANG =='ar' %}dir="rtl"{% endif %}>
 <head>
         {% block head %}
         <meta charset="utf-8" />
@@ -68,7 +68,7 @@
                     {% for title, link in MENUITEMS %}
                     <li><a href="{{ link }}">{{ title }}</a></li>
                     {% endfor %}
-                    <li class="has_menu"><a href="{{ SITEURL }}/{{INDEX_SAVE_AS}}">Blog</a>
+                    <li class="has_menu"><a href="{{ SITEURL }}/{{INDEX_SAVE_AS}}">{% trans %}Blog{% endtrans %}</a>
                         <span class="submenu_toggle"></span>
                         <ul>
                             {% if DISPLAY_PAGES_ON_MENU != False %}
@@ -77,7 +77,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if DISPLAY_CATEGORIES_ON_MENU -%}
-                            <li ><span class="separator">Categories</span>
+                            <li ><span class="separator">{% trans %}Categories{% endtrans %}</span>
                                 <span class="submenu_toggle"></span>
                                 <ul>
                                 {% for cat, null in categories %}
@@ -99,10 +99,11 @@
         
         <section id="keepintouch" class="section section--last zIdx10">
           <div class="keepintouch section__content">
-              <h2>GET IN TOUCH</h2>
+              <h2>{% trans %}GET IN TOUCH{% endtrans %}</h2>
               <div class="content">
-                  <p>
-                      If you have a project in mind or you want to work with me or you want just to start a conversation feel free to contact me by writing an email or otherwise.
+                  <p>{% block getintouch_msg %}
+                      {% trans %}If you have a project in mind or you want to work with me or you want just to start a conversation feel free to contact me by writing an email or otherwise.{% endtrans %}
+                      {% endblock %}
                   </p>
                   <ul>
                       <li><a href="mailto:soumer120@gmail.com"><svg width="20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -124,7 +125,7 @@
                           C7.4,7.3,11.9,15.2,13.4,17.7L13.4,17.7z M16.4,17.3c-0.8,0.5-1.8,0.2-2.3-0.6l-7-12.1C6.7,3.8,7,2.8,7.8,2.3l3.7-2.1
                           c0.8-0.5,1.8-0.2,2.3,0.6l7,12.1c0.5,0.8,0.2,1.8-0.6,2.3L16.4,17.3z M35.5,50.4c-0.8,0.5-1.8,0.2-2.3-0.6l-7-12.1
                           c-0.5-0.8-0.2-1.8,0.6-2.3l3.7-2.1c0.8-0.5,1.8-0.2,2.3,0.6l7,12.1c0.5,0.8,0.2,1.8-0.6,2.3L35.5,50.4z"/>
-                     </svg> <span>+21260063407</span></a></li>
+                     </svg> <span>+212604063407</span></a></li>
                   </ul>
                   <!--form action="https://tinyletter.com/soumer" method="post" target="popupwindow">
                       <input type="email" name="email" class="email" placeholder="Type your email">
@@ -134,13 +135,13 @@
                   <form action="/" method="POST" id="contactForm">
                       <input type="hidden" name="lang" value="{{ self.html_lang() }}">
                       <input type="hidden" name="page_name" value="{{output_file}}">
-                      <label>Name</label>
+                      <label>{% trans %}Name{% endtrans %}</label>
                       <input type="text" name="name" required>
-                      <label>Email </label>
+                      <label>{% trans %}Email{% endtrans %} </label>
                       <input type="email" name="reply_to" required>
-                      <label> Message: </label>
+                      <label> {% trans %}Message{% endtrans %} </label>
                       <textarea name="message" required></textarea>
-                      <button type="submit">Send Message</button>
+                      <button type="submit">{% trans %}Send Message{% endtrans %}</button>
                   </form>
                   <div id="js-form-response"></div>
                     

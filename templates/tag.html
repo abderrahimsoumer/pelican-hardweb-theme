@@ -1,13 +1,13 @@
 {% extends "index.html" %}
 
-{% block title %}{{ SITENAME }} - {{ tag }} tag{% endblock %}
-{% block description %}{{ SITENAME }} - Articles tagged with {{ tag }}{% endblock %}
+{% block title %}{{ SITENAME }} - {{ tag }} {% trans %}tag{% endtrans %}{% endblock %}
+{% block description %}{{ SITENAME }} - {% trans t_tag=tag %}Articles tagged with {{ t_tag }}{% endtrans %}{% endblock %}
 
 {% block content_head %} 
 <section id="head" class="relative zIdx100">
     <div class="head">
         <header class="intro">
-            <h1>Articles tagged with <span  class="second_strong">{{ tag }}</span> </h1>
+            <h1>{% trans %}Articles tagged with{% endtrans %} <span  class="second_strong">{{ tag }}</span> </h1>
             <p></p>
         </header>
     </div>

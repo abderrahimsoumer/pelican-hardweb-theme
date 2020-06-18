@@ -1,9 +1,9 @@
 <div class="share_buttons">
 {% if TWITTER_USERNAME %}
-<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="{{TWITTER_USERNAME}}">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="{{TWITTER_USERNAME}}">{% trans %}Tweet{% endtrans %}</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
 {% endif %}
 {% if FACEBOOK_APPID %}
-<div class="fb-share-button" data-href="{{SITEURL}}/{{article.url}}" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{SITEURL}}/{{article.url}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+<div class="fb-share-button" data-href="{{SITEURL}}/{{article.url}}" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{SITEURL}}/{{article.url}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">{% trans %}Share{% endtrans %}</a></div>
 {% endif %}
 {% if LINKDIN_USERNAME %}
 <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
