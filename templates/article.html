@@ -9,9 +9,8 @@
 {% if article.imagealt %}
 <meta name="twitter:image:alt" content="{{article.imagealt}}">
 {% endif %}
-<link rel="canonical" href="https://hardweb.dev/">
 {% if article.keywords %}
-<meta name="keywords" value="{{ article.keywords|join(',') }}" />
+<meta name="keywords" value="{{ article.keywords }}" />
 {% elif article.tags  %}
 <meta name="keywords" value="{{ article.tags|join(',') }}" />
 {% endif %}
