@@ -1,5 +1,8 @@
 //functions
 function addEvent(evnt, elem, func) {
+    if(!elem){
+      return ;
+    }
     if (elem.addEventListener){  // W3C DOM
        elem.addEventListener(evnt,func,false);
     }else if (elem.attachEvent) { // IE DOM
@@ -42,7 +45,7 @@ function addEvent(evnt, elem, func) {
   var menu_icon = document.getElementById('menu_icon');
   var menu_languages = document.getElementById('menu_languages');
   var overlay_menu = document.getElementById('menu_overlay');
-  
+
   addEvent('click', menu_icon,function(ev){
     if(this.classList.contains('close')){
         this.className = "menu-icon open"; 
@@ -56,7 +59,7 @@ function addEvent(evnt, elem, func) {
   } );
   addEvent('click', overlay_menu,function(ev){
       if(ev.target.nodeType !="site_name" && ev.target.tagName !="UL" &&  ev.target.tagName !="LI"){
-        this.className = "menu-icon close"; 
+        menu_icon.className = "menu-icon close"; 
         overlay_menu.className = "overlay-menu"; 
         menu_languages.style.position = "absolute";
         
@@ -68,7 +71,7 @@ function addEvent(evnt, elem, func) {
   (function(){
     var form = document.getElementById('contactForm');
     var formResponse = document.getElementById('js-form-response');
-  
+    if(form){
     form.onsubmit = function(e) {
       e.preventDefault();
   
@@ -114,6 +117,7 @@ function addEvent(evnt, elem, func) {
   
   
     };
+  }//end if form
   })();
   
   
