@@ -2,14 +2,15 @@
 {% block html_lang %}{{ article.lang }}{% endblock %}
 {% block title %}{{ SITENAME }} - {{ article.title|striptags  }}{% endblock %}
 {% block description %}{{ SITENAME }} - {{ article.summary|striptags  }}{% endblock %}
+{% block meta_type %}article{%endblock%}
 
 {% block meta_extra %}
 <meta property="og:url" content="{{SITEURL}}/{{article.url}}">
 <link rel="canonical" href="{{SITEURL}}/{{article.url}}">
 {% if article.keywords %}
-<meta name="keywords" value="{{ article.keywords }}" />
+<meta name="keywords" content="{{ article.keywords }}" />
 {% elif article.tags  %}
-<meta name="keywords" value="{{ article.tags|join(',') }}" />
+<meta name="keywords" content="{{ article.tags|join(',') }}" />
 {% endif %}
 {% if article.image %}
 <meta property="og:image" content="{{article.image}}">
