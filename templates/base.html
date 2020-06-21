@@ -54,6 +54,19 @@
     {% block begin_body %} {% endblock %}
     <header>
         {% block menu_languages %}
+        <!-- SNIP -->
+        {% if lang_siteurls %}
+        <ul id="menu_languages" class="languages">
+          <li  class="active"><a href="#">{{ DEFAULT_LANG | lookup_lang_name }}</a></li>
+          {% for lang, siteurl in lang_siteurls.items() %}
+            {% if lang != DEFAULT_LANG %}
+            <li><a href="{{ siteurl }}/{{INDEX_SAVE_AS}}">{{ lang | lookup_lang_name }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+<!-- SNIP -->
         {% endblock %}
         <span id="menu_icon" class="menu-icon close">
             <span></span>
