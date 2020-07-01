@@ -18,9 +18,9 @@ setup(
     maintainer='Abderrahim soumer',
     maintainer_email='contact@hardweb.dev',
     classifiers=[
-        'Development Status :: 1 - Beta',
+        'Development Status :: 3 - Alpha',
         'Framework :: Pelican :: Themes',
-        'LICENSE :: OSI APPROVED :: MIT LICENSE',
+        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3 :: Only',
     ],
     description='Colored theme with contact form',
