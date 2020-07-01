@@ -79,7 +79,7 @@ function addEvent(evnt, elem, func) {
       var  data = {};
       var formElements = Array.from(form);
       var METHOD = "POST";
-      var URL = "https://47u2z0hlxb.execute-api.eu-west-3.amazonaws.com/contact/contact";
+      var URL = form.action;
       formElements.map(function(input){ data[input.name] = input.value });
   
       // Log what our lambda function will receive

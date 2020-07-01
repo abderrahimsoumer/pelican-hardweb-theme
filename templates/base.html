@@ -140,12 +140,7 @@
                           c-0.5-0.8-0.2-1.8,0.6-2.3l3.7-2.1c0.8-0.5,1.8-0.2,2.3,0.6l7,12.1c0.5,0.8,0.2,1.8-0.6,2.3L35.5,50.4z"/>
                      </svg> <span>{{AUTHOR_PHONE}}</span></a></li>{% endif %}
                   </ul>
-                  <!--form action="https://tinyletter.com/soumer" method="post" target="popupwindow">
-                      <input type="email" name="email" class="email" placeholder="Type your email">
-                      <input type="hidden" name="embed" value="1">
-                      <input type="submit" value="Subscribe">
-                  </form-->
-                  <form action="/" method="POST" id="contactForm">
+                  <form action="{{CONTACT_FORM_ACTION}}" method="POST" id="contactForm">
                       <input type="hidden" name="lang" value="{{ self.html_lang() }}">
                       <input type="hidden" name="page_name" value="{{output_file}}">
                       <label>{% trans %}Name{% endtrans %}</label>
