@@ -12,7 +12,7 @@ README = (base_dir / "README.md").read_text()
 
 setup(
     name='colored-with-contactform',
-    version='1.0.1',
+    version='1.0.2',
     author='Abderrahim soumer',
     author_email='contact@hardweb.dev',
     maintainer='Abderrahim soumer',
