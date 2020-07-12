@@ -11,8 +11,8 @@ base_dir = pathlib.Path(__file__).parent
 README = (base_dir / "README.md").read_text()
 
 setup(
-    name='Colored with contact form',
-    version='0.1.1',
+    name='colored-with-contactform',
+    version='1.0.1',
     author='Abderrahim soumer',
     author_email='contact@hardweb.dev',
     maintainer='Abderrahim soumer',
